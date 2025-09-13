@@ -1,30 +1,35 @@
-// Defining an interface
-interface Animal {
-    // Abstract method (no body)
-    void sound();
+package com.Interface;
 
-    // Another abstract method
-    void sleep();
-}
+public class Interface {
+	public  interface Animal {
+		 int i=10;
+		 
+		  public void sound();
+		  
+	}
+	  public static class Dog implements Animal {
+		  @Override
+		   public void sound()
+		  {
+			  System.out.println("sound method from child class");
+			  
+		  }
+	  }
+	  public static class cat implements Animal {
+		  @Override
+		  public void sound ()
+		  {
+			  System.out.println("sound from cat class");
+		  }
+		  
+			
+		}
+  public static void main(String[] args) {
+	Animal a1=new Dog();
+	Animal a2=new cat();
+	a1.sound();
+	a2.sound();
+	
+  }			
 
-// Implementing interface in a class
-class Dog implements Animal {
-    // Providing implementation of sound()
-    public void sound() {
-        System.out.println("Dog barks");
-    }
-
-    // Providing implementation of sleep()
-    public void sleep() {
-        System.out.println("Dog is sleeping");
-    }
-}
-
-// Main class
-public class InterfaceExample {
-    public static void main(String[] args) {
-        Animal myDog = new Dog();  // Interface reference, Dog object
-        myDog.sound();   // Calls Dog's implementation
-        myDog.sleep();
-    }
 }
