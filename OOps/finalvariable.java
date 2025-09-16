@@ -1,12 +1,11 @@
-public class FinalVariableExample {
+class FinalVariableExample {
     public static void main(String[] args) {
-        final int x = 10;
-        // x = 20; // compile error: cannot assign a value to final variable x
+        // final variable
+        final int age = 25;
 
-        final StringBuilder sb = new StringBuilder("Hello");
-        sb.append(" World");          // allowed — reference unchanged, object mutated
-        System.out.println(sb);      // prints: Hello World
+        System.out.println("Age: " + age);
 
-        // sb = new StringBuilder("Other"); // compile error: cannot reassign final reference
+        // Trying to change the value will give an error
+        // age = 30;  // ❌ Error: cannot assign a value to final variable
     }
 }
